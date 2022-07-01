@@ -16,7 +16,7 @@ class Ingredient(models.Model):
     price_per_unit = models.FloatField(default=0.0)
 
     def get_absolute_url(self):
-        return "/inventory"
+        return "/ingredient"
     def __str__(self):
         return f"{self.name} {self.unit} {self.quantity} {self.price_per_unit}"
 
