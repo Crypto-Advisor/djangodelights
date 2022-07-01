@@ -1,0 +1,21 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'inventory/styles.css' %}">
+</head>
+<body>
+    <div class="app">
+        <div class="nav-bar">
+            <a href="{% url 'home' %}">Home</a>
+            {% comment %}
+            <a href="{% url 'menu' %}">Menu</a>
+            <a href="{% url 'purchases' %}">Purchases</a>
+            <a href="{% url 'recipies' %}">Recipies</a>
+            <a href="{% url 'inventory' %}">Inventory</a>
+            {% endcomment %}
+
+        </div>
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</body>

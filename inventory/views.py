@@ -7,6 +7,10 @@ from django.urls import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm
 
 from .models import Ingredient, MenuItem, RecipeRequirement, Purchase
-# from .forms import 
+from .forms import IngredientForm, MenuItemForm, RecipeRequirementForm, PurchaseForm
 
 # Create your views here.
+
+def home(request):
+    context = {"name": request.user}
+    return render(request, 'inventory/home.html', context)
