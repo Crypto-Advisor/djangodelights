@@ -6,12 +6,10 @@
     <div class="app">
         <div class="nav-bar">
             <a href="{% url 'home' %}">Home</a>
-            {% comment %}
             <a href="{% url 'menu' %}">Menu</a>
-            <a href="{% url 'purchases' %}">Purchases</a>
-            <a href="{% url 'recipies' %}">Recipies</a>
+            <a href="{% url 'recipe' %}">Recipes</a>
+            <a href="{% url 'purchase' %}">Purchases</a>
             <a href="{% url 'inventory' %}">Inventory</a>
-            {% endcomment %}
 
         </div>
         {% block content %}

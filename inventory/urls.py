@@ -6,6 +6,11 @@ urlpatterns = [
     path('account/', include('django.contrib.auth.urls'), name="login"),
 
     path('ingredient/', views.IngredientList.as_view(), name="ingredientlist"),
+    path('menu/', views.MenuItemList.as_view(), name="menu"),
+    path('recipe/', views.RecipeRequirementList.as_view(), name="recipe"),
+    path('purchase/', views.PurchaseList.as_view(), name="purchase"),
+    path('inventory/', views.IngredientList.as_view(), name="inventory"),
+
 
     path('ingredient/create', views.IngredientCreate.as_view(), name="ingredientcreate"),
     path('menuitem/create', views.MenuItemCreate.as_view(), name="menuitemcreate"),

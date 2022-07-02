@@ -1,0 +1,24 @@
+{% extends './base.html' %}
+{% block content %}
+<h2>Inventory</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Unit</th>
+        <th>Quantity</th>
+        <th>Price Per Unit</th>
+        <th></th>
+        <th></th>
+    </tr>
+    {% for item in ingredient_list %}
+    <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.unit }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.price_per_unit }}</td>
+        <td><a href="{% url 'ingredientupdate' item.id %}">Edit</a></td>
+        <td><td><a href="{% url 'ingredientdelete' item.id %}">Delete</a></td></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

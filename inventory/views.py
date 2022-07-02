@@ -18,15 +18,19 @@ def home(request):
 # read
 class IngredientList(ListView):
     model = Ingredient
+    template_name = 'inventory/inventory.html'
 
 class MenuItemList(ListView):
     model = MenuItem
+    template_name = 'inventory/menu.html'
 
 class RecipeRequirementList(ListView):
     model = RecipeRequirement
+    template_name = 'inventory/recipies.html'
 
 class PurchaseList(ListView):
     model = Purchase
+    template_name = 'inventory/purchases.html'
 
 #create
 class IngredientCreate(CreateView):
